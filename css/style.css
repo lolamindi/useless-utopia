@@ -1,1 +1,47 @@
 @import "./root.css";
+
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  background-color: var(--color_yellow);
+  display: flex;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.card_facts {
+  border: 2px solid var(--color_dark_blue);
+  border-radius: 10px;
+  width: 400px;
+  padding: 20px;
+  background-color: var(--color_cream);
+  color: var(--color_dark_blue);
+  font-size: var(--font_mobile_fact_text);
+  line-height: 1.5;
+  text-align: center;
+}
+
+.buttons_container {
+  display: flex;
+  justify-content: space-between;
+  width: 300px;
+  margin-top: 20px;
+}
+
+.button {
+  cursor: pointer;
+  border-radius: 7px;
+  padding: 13px 15px;
+}
+
+/* #button_new_fact {
+
+} */
+
+/* media query to hide button_favorites-desktop */
+
