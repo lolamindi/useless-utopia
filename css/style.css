@@ -111,7 +111,7 @@ body {
     border: none;
     width: 55%;
     font: var(--font_desktop_button_text);
-    padding-left: 11%;
+    justify-content: center;
   }
 
   #button_new_fact {
