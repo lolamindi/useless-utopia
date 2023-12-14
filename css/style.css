@@ -19,6 +19,8 @@ header {
   margin-left: 25px;
   width: 200px;
   font-weight: 800;
+  line-height: 75%;
+  padding-bottom: 10px;
 }
 .page_logo {
   float: inline-end;
@@ -114,6 +116,8 @@ footer p {
   .page_title {
     width: auto;
     font-weight: 700;
+    padding-bottom: 0;
+    line-height: normal;
   }
   .page_logo {
     margin-top: 8px;
