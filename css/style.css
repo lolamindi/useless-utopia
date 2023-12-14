@@ -10,7 +10,6 @@ body {
 }
 header {
   background-color: var(--color_light_blue);
-  min-height: 61px;
   padding-top: 7px;
 }
 .page_title {
@@ -50,6 +49,7 @@ header {
   justify-content: center;
   max-width: 300px;
   margin-top: 20px;
+  margin-bottom: 41px;
 }
 
 .button {
@@ -95,18 +95,22 @@ footer p {
 
 .title_favorites {
   text-align: center;
-  margin-top: 40px;
+  margin-top: 25px;
   margin-bottom: 32px;
 }
 
 .wrapper_favorite {
   display: grid;
   gap: 30px;
+  margin: 20px 50px;
 }
 
 /* media query to hide button_favorites-desktop */
 
 @media (min-width: 425px) {
+  header {
+    min-height: 61px;
+  }
   .page_title {
     width: auto;
     font-weight: 700;
@@ -126,5 +130,9 @@ footer p {
   }
   .wrapper_favorite {
     grid-template-columns: 1fr 1fr;
+    margin: auto;
+  }
+  .title_favorites {
+    margin-top: 40px;
   }
 }
