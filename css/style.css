@@ -18,12 +18,14 @@ header {
   font-size: 36px;
   font-weight: 700;
   margin-left: 25px;
+  width: 200px;
+  font-weight: 800;
 }
 .page_logo {
   float: inline-end;
   width: 33.35px;
   margin-right: 13.65px;
-  margin-top: 8px;
+  margin-top: 30px;
 }
 .main {
   display: flex;
@@ -56,6 +58,9 @@ header {
   padding: 13px 15px;
 }
 
+#button_favorites_desktop {
+  display: none;
+}
 /* #button_new_fact {
 
 } */
@@ -66,27 +71,27 @@ footer {
 }
 
 footer p {
-  float: inline-end;
   margin-top: 11px;
   margin-bottom: 11px;
-  margin-right: 24px;
+  text-align: center;
+  margin-right: auto;
 }
 
 /* media query to hide button_favorites-desktop */
 
-@media (max-width: 425px) {
+@media (min-width: 425px) {
   .page_title {
-    width: 200px;
-    font-weight: 800;
+    width: auto;
+    font-weight: 700;
   }
   .page_logo {
-    margin-top: 30px;
+    margin-top: 8px;
   }
   footer p {
-    text-align: center;
-    margin-right: auto;
+    float: inline-end;
+    margin-right: 24px;
   }
   #button_favorites_desktop {
-    display: none;
+    display: flex;
   }
 }
