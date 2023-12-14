@@ -10,11 +10,11 @@ body {
 }
 header {
   background-color: var(--color_light_blue);
-  height: 61px;
+  min-height: 61px;
   padding-top: 7px;
 }
 .page_title {
-  display: inline;
+  display: inline-flex;
   font-size: 36px;
   font-weight: 700;
   margin-left: 25px;
@@ -34,7 +34,7 @@ header {
 .card_facts {
   border: 2px solid var(--color_dark_blue);
   border-radius: 10px;
-  width: 400px;
+  max-width: 400px;
   padding: 20px;
   background-color: var(--color_cream);
   color: var(--color_dark_blue);
@@ -46,7 +46,7 @@ header {
 .buttons_container {
   display: flex;
   justify-content: space-between;
-  width: 300px;
+  max-width: 300px;
   margin-top: 20px;
 }
 
@@ -67,7 +67,26 @@ footer {
 
 footer p {
   float: inline-end;
+  margin-top: 11px;
+  margin-bottom: 11px;
+  margin-right: 24px;
 }
 
 /* media query to hide button_favorites-desktop */
 
+@media (max-width: 425px) {
+  .page_title {
+    width: 200px;
+    font-weight: 800;
+  }
+  .page_logo {
+    margin-top: 30px;
+  }
+  footer p {
+    text-align: center;
+    margin-right: auto;
+  }
+  #button_favorites_desktop {
+    display: none;
+  }
+}
