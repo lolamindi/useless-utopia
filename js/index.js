@@ -4,6 +4,7 @@
   const data = await response.json()
   return data.text 
 }*/
+
 const url = 'https://uselessfacts.jsph.pl/api/v2/facts/random?language=en'
 async function get_data() {
     try {
