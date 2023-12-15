@@ -13,10 +13,8 @@ header {
 }
 .page_title {
   display: inline-flex;
-  font-size: 36px;
-  font-weight: 700;
   margin-left: 25px;
-  font-weight: 800;
+  font: var(--font_mobile_title_1);
 }
 .page_logo {
   float: inline-end;
@@ -162,9 +160,8 @@ footer p {
   }
   .page_title {
     width: auto;
-    font-weight: 700;
     padding-bottom: 0;
-    line-height: normal;
+    font: var(--font_desktop_title_1);
   }
   .page_logo {
     margin-top: 8px;
