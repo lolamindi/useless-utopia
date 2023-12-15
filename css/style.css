@@ -1,9 +1,9 @@
 @import "./root.css";
 
 body {
-  margin: 0;
+  margin: 0 auto;
   padding: 0;
-  height: 100vh;
+  height: 100%;
   background-color: var(--color_yellow);
   flex-direction: column;
   background-image: url(../assets/image10.png);
@@ -35,6 +35,7 @@ header {
   align-items: center;
   justify-content: center;
   padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
 }
 
 .card_facts {
@@ -96,6 +97,10 @@ header {
 footer {
   background-color: var(--color_light_blue);
   margin-top: auto;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 2rem;
 }
 
 footer p {
@@ -110,19 +115,40 @@ footer p {
 
 @media (min-width: 900px) {
 
-  
+  header {
+    min-height: 61px;
+    height: 86px;
+    padding-top: 20px;
+  }
+
+  .page_title {
+    width: auto;
+    padding-bottom: 0;
+    font: var(--font_desktop_title_1);
+  }
+
+  .page_logo {
+    margin-top: 0.75rem;
+    margin-right: 2rem;
+  }
+
+  footer p {
+    float: inline-end;
+    margin-right: 24px;
+  }
+
   .main {
+    height: calc(100vh - 172px);
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
     justify-self: center;
-    padding-left: 5rem;
+    padding-left: 2rem;
   }
 
   .card_facts {
     width: 75rem;
-    padding: 50px;
     font: var(--font_desktop_fact_text);
     line-height: 1.5;
     text-align: center;
@@ -161,30 +187,8 @@ footer p {
     display: none;
   }
 
-  header {
-    min-height: 61px;
-    height: 86px;
-    padding-top: 20px;
-  }
-
-  .page_title {
-    width: auto;
-    padding-bottom: 0;
-    font: var(--font_desktop_title_1);
-  }
-
-  .page_logo {
-    margin-top: 8px;
-  }
-
-  footer p {
-    float: inline-end;
-    margin-right: 24px;
-  }
-
   footer {
-    height: 86px;
-    padding-top: 25px;
+    height: 2rem;
     margin-top: 30px;
   }
 }
