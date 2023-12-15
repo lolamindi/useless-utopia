@@ -96,7 +96,7 @@ header {
   }
   
   .main_desktop {
-    height: 100vh;
+    height: calc(100vh - 172px);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -157,6 +157,8 @@ footer p {
 @media (min-width: 425px) {
   header {
     min-height: 61px;
+    height: 86px;
+    padding-top: 20px;
   }
   .page_title {
     width: auto;
@@ -170,5 +172,10 @@ footer p {
   footer p {
     float: inline-end;
     margin-right: 24px;
+  }
+  footer {
+    height: 86px;
+    padding-top: 25px;
+    margin-top: 30px;
   }
 }
