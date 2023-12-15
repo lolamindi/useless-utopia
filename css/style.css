@@ -6,6 +6,8 @@ body {
   height: 100vh;
   background-color: var(--color_yellow);
   flex-direction: column;
+  background-image: url(../assets/image10.png);
+  background-repeat: repeat;
 }
 header {
   background-color: var(--color_light_blue);
