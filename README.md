@@ -32,7 +32,7 @@ This exercise involved the creation of a single-page application (SPA) following
 
 ## Testing
 
-Testing involved verifying the the correct rendering of the CSS file as well as the the API's response status and the ability of the SPA to obtain text-based facts from the chosen API. All tests passed. To perform these same tests, it is necessary to install Node.js and follow the guidelines on vitest.dev.   
+Testing involved verifying the the correct rendering of the CSS file as well as the the API's response status. All tests passed. To perform these same tests, it is necessary to install Node.js and follow the guidelines on vitest.dev.   
    
 
 ---
