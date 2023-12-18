@@ -26,6 +26,7 @@
         font: var(--font_desktop_fact_text);
         line-height: 1.5;
         text-align: center;
+        margin-left: 3rem;
     }
 
     .buttons_container {
@@ -34,6 +35,7 @@
         align-items: center;
         width: 40rem;
         gap: 1.5rem;
+        margin-left:-1.25rem;
     }
 
     #button_new_fact,
@@ -44,11 +46,16 @@
 
     #button_new_fact,
     #button_add_favorite,
-    #button_home {
+    #button_home,
+    #button_delete {
         height: 4rem;
         font: var(--font_desktop_button_text);
         border: none;
         justify-content: center;
+    }
+
+    #button_delete {
+        width: 14rem;
     }
 
     #button_favorites_desktop_text {

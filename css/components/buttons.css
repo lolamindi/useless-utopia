@@ -41,16 +41,30 @@
 #button_favorites_desktop_text {
   display: none;
 }
+
 #home {
   display: none;
   margin: auto;
 }
 
+
 #button_home {
   background-color: var(--color_dark_blue);
   color: var(--color_cream);
   border: none;
-  width: max-content;
+  width: 11rem;
+  font: var(--font_mobile_button_text);
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-bottom: 1rem;
+}
+
+#button_delete {
+  background-color: var(--color_dark_blue);
+  color: var(--color_cream);
+  border: none;
+  width: 11rem;
   font: var(--font_mobile_button_text);
   display: flex;
   align-items: center;
