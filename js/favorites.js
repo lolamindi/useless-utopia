@@ -3,9 +3,9 @@ let favorites = [];
 
 const load_favorites = () => {
   const stored_favorites = localStorage.getItem('favorites');
-  if (stored_favorites) {
-    favorites = JSON.parse(stored_favorites);
-  }
+  favorites = stored_favorites 
+  ? JSON.parse(stored_favorites) 
+  : [];
 };
 
 const save_favorites = () => {
@@ -21,7 +21,5 @@ export const add_favorite = (fact) => {
 
 export const list_favorites = () => {
   load_favorites();
-  return favorites.length === 0
-    ? ["No favorites yet"]
-    : favorites;
+  return favorites;
 };
