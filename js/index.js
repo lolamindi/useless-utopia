@@ -1,23 +1,46 @@
-const url = 'https://uselessfacts.jsph.pl/api/v2/facts/random?language=en'
-const get_data = async () => {
-    try {
-        const response = await fetch(url, {
-            method: 'GET',
-            headers: { 'Accept': 'application/json' }
-        });
-        const data = await response.json();
-        return data.text;
-    } catch (error) {
-        throw error
-    }
-}
+import { get_fact } from './data.js';
+import { add_favorite, list_favorites } from './favorites.js';
+
+const fact_text = document.querySelector(".card_facts_text")
 
 const new_fact = async () => {
-    const fact = await get_data()
-    document.querySelector(".card_facts_text").innerHTML = fact
+    const fact = await get_fact();
+    fact_text.innerHTML = fact;
+    return fact;
+};
+
+const favorite = () => {
+    add_favorite(fact_text.innerHTML);
+};
+
+const favorites = () => {
+    const favorites_list = list_favorites();
+    const favorites_list_elem = document.getElementById("list_favorites");
+    favorites_list_elem.innerHTML = favorites_list.length === 0
+        ? "<li>No favorites yet</li>"
+        : favorites_list.map((fact) => {
+            const list_item = document.createElement("li");
+            list_item.textContent = fact;
+            return list_item.outerHTML;
+        }).join('');
+    document.querySelector("main").style.display = "none";
+    document.getElementById("home").style.display = "block";
+};
+
+
+const refresh = () => {
+    location.reload();
+};
+
+const clear = () => {
+    localStorage.clear();
+    refresh();
 }
 
-
 document.addEventListener('DOMContentLoaded', function () {
-    document.getElementById("button_new_fact").addEventListener("click", new_fact)
+    document.getElementById("button_new_fact").addEventListener("click", new_fact);
+    document.getElementById("button_add_favorite").addEventListener("click", favorite);
+    document.getElementById("button_favorites").addEventListener("click", favorites);
+    document.querySelector(".page_title").addEventListener("click", refresh);
+    document.getElementById("home").addEventListener("click", clear);
 });
