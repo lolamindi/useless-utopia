@@ -6,9 +6,15 @@ import { show_toast } from './toast.js'
 const fact_text = document.querySelector(".card_facts_text");
 
 const new_fact = async () => {
-  const fact = await get_fact();
-  fact_text.innerHTML = fact;
-  return fact;
+  try {
+    const fact = await get_fact();
+    
+    fact_text.innerHTML = fact;
+
+    return fact;
+  } catch(error) {
+    show_toast("There's no internet connection.");
+  }
 };
 
 const favorite = () => {

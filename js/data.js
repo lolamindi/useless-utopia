@@ -1,20 +1,24 @@
+export const get_fact = async() => {
+    try {
+        const response = await fetch(
+            'https://uselessfacts.jsph.pl/api/v2/facts/random?language=en', 
+            {
+                method: 'GET',
+                headers: {
+                    'Accept': 'application/json'
+                }
+            }
+        );
 
-const url = 'https://uselessfacts.jsph.pl/api/v2/facts/random?language=en';
+        if (!response.ok) {
+            throw new Error('Response was not ok.');
+        }
 
-export const get_fact = () => {
-    return new Promise((resolve, reject) => {
-        fetch(url, {
-            method: 'GET',
-            headers: { 'Accept': 'application/json' }
-        })
-            .then(response => response.ok 
-                ? response.json() 
-                : Promise.reject())
-            .then(data => {
-                resolve(data.text);
-            })
-            .catch(error => {
-            show_toast("There's no internet connection."), reject(error);
-            });
-    });
+        const data = await response.json();
+
+        return data.text;
+        
+    } catch (error) {        
+        throw new Error(`Error when get facts. Trace: ${error.message}`);
+    }
 };

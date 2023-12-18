@@ -16,6 +16,13 @@ describe("data.js test", () => {
         };
     }; 
 
+    const wrongApiResponse = () => {
+        return {
+            ok: false,   
+            json: () => vi.fn()
+        };
+    };
+
     it("should receive a 'text' inside the API", async () => {
         fetch.mockResolvedValue(successfulApiResponse());
 
@@ -30,5 +37,15 @@ describe("data.js test", () => {
         );
 
         expect(result).toBe(apiResponse.text);
+    });
+
+    it("should fails when API response is not ok", async () => {
+        fetch.mockResolvedValue(wrongApiResponse());
+
+        try {
+            await get_fact()
+        } catch(error) {
+            expect(error.message).toBe('Error when get facts. Trace: Response was not ok.');
+        }
     });
 });
