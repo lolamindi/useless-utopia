@@ -1,5 +1,7 @@
 import { get_fact } from "./data.js";
 import { add_favorite, list_favorites } from "./favorites.js";
+import { show_toast } from './toast.js'
+
 
 const fact_text = document.querySelector(".card_facts_text");
 
