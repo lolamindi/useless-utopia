@@ -13,4 +13,10 @@ describe("index.js test", () => {
     let link = document.querySelector("link");
     expect(link.href).toMatch(/styles.css$/);
   });
+
+    it("should render the script in html", () => {
+    const document = dom.window.document;
+    const script = document.querySelector("script");
+    expect(script).not.toBeNull();
+  });
 });

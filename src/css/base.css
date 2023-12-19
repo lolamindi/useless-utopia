@@ -9,7 +9,7 @@ body {
     padding: 0;
     background-color: var(--color_yellow);
     flex-direction: column;
-    background-image: url(../assets/image10.png);
+    background-image: url(/assets/background.png);
     background-repeat: repeat;
 }
 
