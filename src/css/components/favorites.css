@@ -1,0 +1,27 @@
+.favorites {
+display: none;
+flex-direction: column;
+margin-bottom: 3rem;
+margin-top: 1rem;
+}
+
+ul {
+  margin: 2rem 0 .25rem 0;
+  padding: 3rem;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+li {
+  border: .25rem solid var(--color_dark_blue);
+  border-radius: .625rem;
+  width: 19rem;
+  padding: 1.25rem;
+  background-color: var(--color_cream);
+  color: var(--color_dark_blue);
+  font: var(--font_mobile_fact_text);
+  line-height: 1.5;
+  text-align: center;
+}
