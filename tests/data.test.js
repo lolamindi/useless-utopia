@@ -1,5 +1,5 @@
 import { describe, expect, it, vi, beforeAll } from "vitest";
-import { get_fact } from "../js/data";
+import { get_fact } from "../src/js/data.js";
 
 global.fetch = vi.fn();
 

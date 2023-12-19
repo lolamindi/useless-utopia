@@ -11,11 +11,11 @@ Group project involving the use of an API within a single-page application that 
 
 ## Images
 
-![Mobile screenshot of new facts section](<./assets/Mobile facts section.png>)
-![Mobile screenshot of favorites section](<./assets/Mobile favorites section.png>)
-![Desktop screenshot with 'added to favorites' message](<assets/Added to favorites.png>)
-![Desktop screenshot with saved favorites](<./assets/Favorites section-1.png>)
-![Desktop screenshot of empty favorites section](<./assets/Empty favorites section.png>)
+![Mobile screenshot of new facts section](<./assets/mobile_facts_section.png>)
+![Mobile screenshot of favorites section](<./assets/mobile_favorites_section.png>)
+![Desktop screenshot with 'added to favorites' message](<assets/desktop_added_to_favorites.png>)
+![Desktop screenshot with saved favorites](<./assets/desktop_favorites_section.png>)
+![Desktop screenshot of empty favorites section](<./assets/desktop_empty_favorites_section.png>)
 
 
 ## Description

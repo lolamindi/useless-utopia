@@ -1,4 +1,4 @@
-export const show_toast = (message) => {
+const show_toast = (message) => {
   const toast = document.getElementById("toast");
   toast.textContent = message;
   toast.classList.add("show");
@@ -7,3 +7,6 @@ export const show_toast = (message) => {
     toast.classList.remove("show");
   }, 2000);
 };
+
+
+export { show_toast }
