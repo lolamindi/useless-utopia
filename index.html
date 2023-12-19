@@ -1,15 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Useless Utopia</title>
-  <link rel="stylesheet" href="./src/css/styles.css"> 
+  <link rel="stylesheet" href="./src/css/styles.css">
   <link rel="icon" type="image/png" href="./assets/favicon.png">
   <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
 </head>
-
 <body>
   <header>
   <nav class="header_nav">
@@ -18,7 +16,6 @@
         class="favorites_heart"></iconify-icon></a>
   </nav>
   </header>
-
   <main class="main">
     <p class="card_facts">
       <em class="card_facts_text">
@@ -27,7 +24,6 @@
         realize what is occurring, relax and correct itself
       </em>
     </p>
-
     <section class="buttons_container">
       <button id="button_new_fact" class="button">Next Fact <iconify-icon icon="cil:chevron-right"
           class="icon"></iconify-icon></i></button>
@@ -39,18 +35,14 @@
     </div>
      <div id="toast" class="toast hide"></div>
   </main>
-
- 
   <section class="favorites">
     <ul id="list_favorites"></ul>
-
     <div id="home" class="home_section">
       <button id="button_home" class="button">Home<iconify-icon icon="material-symbols:home-outline"
           class="icon"></iconify-icon></button>
       <button id="button_delete" class="button">Delete All<iconify-icon icon="healthicons:x-outline"></iconify-icon></button>
     </div>
   </section>
-
   <footer>
     <p>
       © Copyright 2023 Useless Utopia. All rights reserved
@@ -58,5 +50,4 @@
   </footer>
   <script type="module" src="./src/js/index.js"></script>
 </body>
-
 </html>
