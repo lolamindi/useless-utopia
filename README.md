@@ -26,9 +26,9 @@ This exercise involved the creation of a single-page application (SPA) following
 ## Technologies
 
 - Visual Studio Code (HTML & CSS)
-- JavaScript (Vanilla)
-- Node
-- Vitest
+- JavaScript (vanilla)
+- Node.js v20.9.0
+- Vitest v1.1.0
 
 ## Testing
 
