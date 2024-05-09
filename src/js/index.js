@@ -1,4 +1,6 @@
-import{new_fact, favorite, favorites, refresh, clear} from "./main.js"
+import { new_fact, favorite, favorites, refresh, clear} from "./main.js";
+
+document.addEventListener("DOMContentLoaded", () => {index();new_fact(); });
 
 const index = () => {
   document.getElementById("button_new_fact").addEventListener("click", new_fact);
@@ -9,4 +11,6 @@ const index = () => {
   document.getElementById("button_delete").addEventListener("click", clear);
 }
 
-document.addEventListener("DOMContentLoaded", index);
+
+
+

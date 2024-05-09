@@ -27,6 +27,12 @@ const favorites = () => {
       : favorites_list.map((fact) => {
           const list_item = document.createElement("li");
           list_item.textContent = fact;
+          const individual_delete_button = document.createElement("button");
+          individual_delete_button.innerHTML = "X";
+          individual_delete_button.classList.add("individual_delete_button");
+          individual_delete_button.querySelector(".individual_delete_button"); 
+          document.querySelector(".individual_delete_button").addEventListener("click", () => {console.log("hola")});
+          list_item.appendChild(individual_delete_button);
           return list_item.outerHTML;
         }).join("");
       document.querySelector("main").style.display = "none";
@@ -41,5 +47,6 @@ const favorites = () => {
     localStorage.clear();
     favorites();
   };
+
 
 export {new_fact, favorite, favorites, refresh, clear}
