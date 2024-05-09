@@ -7,6 +7,7 @@
   background-color: var(--color_cream);
   color: var(--color_dark_blue);
   font: var(--font_mobile_fact_text);
+  font-style: italic;
   line-height: 1.5;
   text-align: center;
 }
