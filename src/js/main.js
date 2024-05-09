@@ -18,9 +18,15 @@ const favorite = () => {
   add_favorite(fact_text.innerHTML);
 };
 
+const test = ()=>{
+  console.log("hola");
+}
+
 const favorites = () => {
   const favorites_list = list_favorites();
   const favorites_list_elem = document.getElementById("list_favorites");
+
+
 
   favorites_list_elem.innerHTML =
     localStorage.getItem("favorites") === null || favorites_list.length === 0
@@ -32,15 +38,15 @@ const favorites = () => {
             const individual_delete_button = document.createElement("button");
             individual_delete_button.innerHTML = "X";
             individual_delete_button.classList.add("individual_delete_button");
-            individual_delete_button.addEventListener("click", (event) => {
-              console.log("Hello");
-              const listItem = event.target.closest("li");
-              console.log("Parent list item:", listItem);
-              if (listItem) {
-                listItem.remove();
-              }
-            });
 
+
+
+            document.querySelector(".individual_delete_button");
+            individual_delete_button.addEventListener("click", test) 
+
+          
+
+      
             list_item.appendChild(individual_delete_button);
             return list_item.outerHTML;
           })
