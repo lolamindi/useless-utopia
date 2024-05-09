@@ -28,7 +28,8 @@ li {
 }
 
 .individual_delete_button {
-  border: .02rem solid var(--color_dark_blue);
+  /* border: .02rem solid var(--color_dark_blue); */
+  border: none;
   background-color: var(--color_cream);
   color: var(--color_dark_blue);
   padding: .2rem .5rem 0 .5rem;
@@ -38,4 +39,8 @@ li {
   position: absolute;
   right: .35rem;
   bottom: .35rem;
+}
+
+.individual_delete_button:hover {
+  color: var(--color_pink);
 }
