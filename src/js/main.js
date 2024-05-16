@@ -10,7 +10,7 @@ const new_fact = async () => {
     fact_text.innerHTML = fact;
     return fact;
   } catch (error) {
-    show_toast("There's no internet connection.");
+    show_toast("There is no internet connection.");
   }
 };
 
@@ -18,41 +18,32 @@ const favorite = () => {
   add_favorite(fact_text.innerHTML);
 };
 
-const test = ()=>{
-  console.log("hola");
-}
-
 const favorites = () => {
   const favorites_list = list_favorites();
   const favorites_list_elem = document.getElementById("list_favorites");
 
-
-
   favorites_list_elem.innerHTML =
     localStorage.getItem("favorites") === null || favorites_list.length === 0
       ? "<li>No favorites yet</li>"
-      : favorites_list
-          .map((fact) => {
-            const list_item = document.createElement("li");
-            list_item.textContent = fact;
-            const individual_delete_button = document.createElement("button");
-            individual_delete_button.innerHTML = "X";
-            individual_delete_button.classList.add("individual_delete_button");
+      : favorites_list.map((favorite) => {
+          const list_item = document.createElement("li");
+          list_item.textContent = favorite;
 
+          const individual_delete_button = document.createElement("button");
+          individual_delete_button.innerHTML = "X";
+          individual_delete_button.classList.add("individual_delete_button");
+          individual_delete_button.addEventListener("click", (event) => {
+            const listItem = event.target.closest("li");
+            console.log("Parent list item:", listItem);
+            if (listItem) {
+              listItem.remove();
+            }
+          });
 
+          list_item.appendChild(individual_delete_button);
+          return list_item.outerHTML;
+        }).join("");
 
-            document.querySelector(".individual_delete_button");
-            individual_delete_button.addEventListener("click", test) 
-
-          
-
-      
-            list_item.appendChild(individual_delete_button);
-            return list_item.outerHTML;
-          })
-          .join("");
-  document.querySelector("main").style.display = "none";
-  document.querySelector(".favorites").style.display = "flex";
 };
 
 const refresh = () => {
