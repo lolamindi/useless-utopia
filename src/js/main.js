@@ -18,39 +18,35 @@ const favorite = () => {
   add_favorite(fact_text.innerHTML);
 };
 
-const test = ()=>{
-  console.log("hola");
-}
-
 const favorites = () => {
   const favorites_list = list_favorites();
   const favorites_list_elem = document.getElementById("list_favorites");
 
 
+  favorites_list_elem.innerHTML = '';
 
-  favorites_list_elem.innerHTML =
-    localStorage.getItem("favorites") === null || favorites_list.length === 0
-      ? "<li>No favorites yet</li>"
-      : favorites_list
-          .map((fact) => {
-            const list_item = document.createElement("li");
-            list_item.textContent = fact;
-            const individual_delete_button = document.createElement("button");
-            individual_delete_button.innerHTML = "X";
-            individual_delete_button.classList.add("individual_delete_button");
+  if (localStorage.getItem("favorites") === null || favorites_list.length === 0) {
+    favorites_list_elem.innerHTML = "<li>No favorites yet</li>";
+  } else {
+    favorites_list.forEach((fact, index) => {
+      const list_item = document.createElement("li");
+      list_item.textContent = fact;
 
+      const individual_delete_button = document.createElement("button");
+      individual_delete_button.innerHTML = "X";
+      individual_delete_button.classList.add("individual_delete_button");
 
+      individual_delete_button.addEventListener("click", () => {
+        favorites_list.splice(index, 1);
+        localStorage.setItem("favorites", JSON.stringify(favorites_list));
+        favorites(); 
+      });
 
-            document.querySelector(".individual_delete_button");
-            individual_delete_button.addEventListener("click", test) 
+      list_item.appendChild(individual_delete_button);
+      favorites_list_elem.appendChild(list_item);
+    });
+  }
 
-          
-
-      
-            list_item.appendChild(individual_delete_button);
-            return list_item.outerHTML;
-          })
-          .join("");
   document.querySelector("main").style.display = "none";
   document.querySelector(".favorites").style.display = "flex";
 };
@@ -65,3 +61,8 @@ const clear = () => {
 };
 
 export { new_fact, favorite, favorites, refresh, clear };
+
+
+
+
+
