@@ -22,4 +22,5 @@
 .favorites_heart {
   font-size: 2.375rem;
   color: var(--color_pink);
+  margin-top: 0.5rem;
 }
