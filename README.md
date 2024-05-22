@@ -127,13 +127,13 @@ The following technologies and versions were used in this project:
 - Unit tests and integration tests
 - Toast alert messages
 
-### Refactorisation 
+### Project Updates 
 
 When originally submitted in December 2023, this project included the following issues:
 - The first fact that appears on the home screen was hardcoded into the HTML
 - It was possible to delete all favorite facts but not to delete individual facts
 
-Following the refactorisation of this project, complete in May 2024:
+Following project updates, complete in May 2024:
 - The initial fact is now dynamically fetched from the API and displayed when the page loads, ensuring a fresh and unique fact each time the application is accessed:
 
 ```javascript
