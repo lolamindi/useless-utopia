@@ -65,7 +65,7 @@ Screenshot showing the toast message that appears when trying to add the same fa
 
 ### Link 
 
-- Live site URL: [Useless Utopia](https://useless-utopia-lolamindi.netlify.app/)
+- Live site URL: [Useless Utopia](https://useless-utopia.vercel.app/)
 
 
 ## Testing
