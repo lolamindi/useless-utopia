@@ -16,7 +16,7 @@ Useless fact generator that operates as a single-page application (SPA), allowin
 - [The process](#the-process)
   - [Technologies](#technologies)
   - [Features](#features)
-  - [Refactorisation](#refactorisation)
+  - [Project Updates](#project-updates)
   - [Authors](#authors)
 
 ## Overview
@@ -46,10 +46,6 @@ Develop a useless fact generator using the facts returned by the API https://use
 Desktop demo video:
 
 ![using the desktop application](assets/readme/useless-utopia-video.gif)
-
-Mobil demo video:
-
-![using the mobile application](assets/readme/mobile-u-u.gif)
 
 Screenshot showing an empty favorites section:
 
