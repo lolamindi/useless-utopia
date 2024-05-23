@@ -68,7 +68,7 @@ Screenshot showing the toast message that appears when trying to add the same fa
 - Live site URL: [Useless Utopia](https://useless-utopia.vercel.app/)
 
 
-## Testing
+### Testing
 
 This project includes unit and integration tests to ensure the functionality of core features. The tests are written using Vitest, a fast and lightweight testing framework, along with JSDOM for simulating a DOM environment. All tests passed. Here is an overview:
 
@@ -97,7 +97,7 @@ To run the tests, use the following command:
 npm test  
 ```   
 
-## Installation 
+### Installation 
 
 To install this project, clone or fork the repository https://github.com/lolamindi/useless-utopia 
 
