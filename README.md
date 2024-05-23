@@ -16,7 +16,7 @@ Useless fact generator that operates as a single-page application (SPA), allowin
 - [The process](#the-process)
   - [Technologies](#technologies)
   - [Features](#features)
-  - [Refactorisation](#refactorisation)
+  - [Project Updates](#project-updates)
   - [Authors](#authors)
 
 ## Overview
@@ -47,9 +47,9 @@ Desktop demo video:
 
 ![using the desktop application](assets/readme/useless-utopia-video.gif)
 
-Mobil demo video:
+Mobile demo video:
 
-![using the mobile application](assets/readme/mobile-video.gif)
+![using the mobile application](assets/readme/mobile-u-u.gif)
 
 Screenshot showing an empty favorites section:
 
@@ -65,7 +65,7 @@ Screenshot showing the toast message that appears when trying to add the same fa
 
 ### Link 
 
-- Live site URL: [Useless Utopia](https://useless-utopia-lolamindi.netlify.app/)
+- Live site URL: [Useless Utopia](https://useless-utopia.vercel.app/)
 
 
 ## Testing
@@ -127,13 +127,13 @@ The following technologies and versions were used in this project:
 - Unit tests and integration tests
 - Toast alert messages
 
-### Refactorisation 
+### Project Updates 
 
 When originally submitted in December 2023, this project included the following issues:
 - The first fact that appears on the home screen was hardcoded into the HTML
 - It was possible to delete all favorite facts but not to delete individual facts
 
-Following the refactorisation of this project, complete in May 2024:
+Following project updates, complete in May 2024:
 - The initial fact is now dynamically fetched from the API and displayed when the page loads, ensuring a fresh and unique fact each time the application is accessed:
 
 ```javascript
