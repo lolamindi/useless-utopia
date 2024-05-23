@@ -49,7 +49,7 @@ Desktop demo video:
 
 Mobil demo video:
 
-![using the mobile application](assets/readme/mobile-u-u.gif)
+![using the mobile application](assets/readme/mobile-video.gif)
 
 Screenshot showing an empty favorites section:
 
